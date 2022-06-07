@@ -1,0 +1,27 @@
+server:
+  port: 18080
+spring:
+  application:
+    name: tanhua-sso
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://159.75.211.245:3306/mytanhua
+    username: coderpwh
+    password: 12345678
+  redis:
+    host: 159.75.211.245
+    port: 6379
+mybatis-plus:
+  type-enums-package: com.coderpwh.sso.enums
+  global-config:
+    db-config:
+      table-prefix: tb_
+      id-type: auto
+rocketmq:
+  name-server: 124.70.111.138:9876
+  producer:
+    group: tanhua
+
+
+
