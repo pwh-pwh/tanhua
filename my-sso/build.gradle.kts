@@ -19,6 +19,17 @@ dependencies {
     implementation("com.alibaba:druid:1.2.10")
     implementation("commons-codec:commons-codec")
     implementation("mysql:mysql-connector-java")
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+    //
+    // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
+    // https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss
+    implementation("com.aliyun.oss:aliyun-sdk-oss:3.15.0")
+// https://mvnrepository.com/artifact/joda-time/joda-time
+    implementation("joda-time:joda-time:2.10.14")
+
 }
 
 tasks.getByName<Test>("test") {

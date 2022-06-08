@@ -7,4 +7,5 @@ package org.coderpwh.constant
  */
 object RedisPrefix {
     const val CHECK_CODE = "CHECK_CODE_"
+    const val TOKEN = "TOKEN_"
 }
