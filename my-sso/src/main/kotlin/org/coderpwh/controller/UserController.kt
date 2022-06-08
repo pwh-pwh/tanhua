@@ -41,7 +41,7 @@ class UserController {
                 var split = StringUtils.split(token, '|')
                 val isNew = split[0]
                 val tokenStr = split[1]
-                result["isNew"] = isNew
+                result["isNew"] = isNew.toBoolean()
                 result["token"] = tokenStr
                 return ResponseEntity.ok(result)
             }

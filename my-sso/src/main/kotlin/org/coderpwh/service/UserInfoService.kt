@@ -51,7 +51,7 @@ class UserInfoService {
         if (user == null) {
             return false
         }
-        try {
+        /*try {
             var isPortrait = faceEngineService.detectFace(file.bytes)
             if (!isPortrait) {
                 return false
@@ -59,7 +59,7 @@ class UserInfoService {
         } catch (e: Exception) {
             println("检测人像照片出错")
             return false
-        }
+        }*/
         var uploadResult = picUploadService.upload(file)
         var userInfo = UserInfo()
         userInfo.logo = uploadResult.name
