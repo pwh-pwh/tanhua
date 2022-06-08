@@ -15,6 +15,7 @@ import java.util.Date
 class MyMetaObjectHandler:MetaObjectHandler {
     override fun insertFill(metaObject: MetaObject) {
         this.fillStrategy(metaObject,"created",Date())
+        this.fillStrategy(metaObject,"updated",Date())
     }
 
     override fun updateFill(metaObject: MetaObject) {

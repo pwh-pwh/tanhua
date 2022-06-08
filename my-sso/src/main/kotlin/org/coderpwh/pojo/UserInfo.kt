@@ -8,19 +8,19 @@ import org.coderpwh.enums.SexEnum
  * @version 1.0.0 v
  */
 data class UserInfo(
-    val id: Long,
-    val userId: Long,
-    val nickName: String,
-    val logo: String,
-    val tags: String,
-    val sex: SexEnum,
-    val age: Int,
-    val edu: String,
-    val city: String,
-    val birthday: String,
-    val coverPic: String,
-    val industry: String,
-    val income: String,
-    val marriage: String
+    var id: Long?=null,
+    var userId: Long?=null,
+    var nickName: String?=null,
+    var logo: String?=null,
+    var tags: String?=null,
+    var sex: SexEnum?=null,
+    var age: Int?=null,
+    var edu: String?=null,
+    var city: String?=null,
+    var birthday: String?=null,
+    var coverPic: String?=null,
+    var industry: String?=null,
+    var income: String?=null,
+    var marriage: String?=null
 ) : BasePojo()
 

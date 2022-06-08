@@ -94,4 +94,20 @@ class UserService {
         return "$isNew|$token"
     }
 
+    fun queryUserByToken(token: String): User? {
+        try {
+            val redisKey = RedisPrefix.TOKEN + token
+            var cacheData = redisTemplate.opsForValue().get(redisKey)
+            if (StringUtils.isEmpty(cacheData)) {
+                return null
+            }
+            //刷新token时间
+            redisTemplate.expire(redisKey,Duration.ofHours(1))
+            return MAPPER.readValue(cacheData,User::class.java)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }
+
 }

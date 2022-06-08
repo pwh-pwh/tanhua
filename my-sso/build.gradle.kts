@@ -29,7 +29,9 @@ dependencies {
     implementation("com.aliyun.oss:aliyun-sdk-oss:3.15.0")
 // https://mvnrepository.com/artifact/joda-time/joda-time
     implementation("joda-time:joda-time:2.10.14")
-
+    implementation(fileTree("lib",{
+        include("*.jar")
+    }))
 }
 
 tasks.getByName<Test>("test") {

@@ -13,11 +13,13 @@ spring:
     host: 159.75.211.245
     port: 6379
 mybatis-plus:
-  type-enums-package: com.coderpwh.sso.enums
+  type-enums-package: org.coderpwh.enums
   global-config:
     db-config:
       table-prefix: tb_
       id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 rocketmq:
   name-server: 124.70.111.138:9876
   producer:
@@ -25,5 +27,10 @@ rocketmq:
 
 jwt:
   secret: 76bd425b6f29f7fcc2e0bfc286043df1
+
+arcsoft:
+  appid: 3axCqJ4P1Rg1n4Za1m5Rz2vD69ahr9zWkLM1waq34wSs
+  sdkKey: Cxv7sKQDnorSLtQ7q75h1SC7Jk8opcKAXyZbFF3uSJEj
+  libPath: D:\\develop\\libs\\WIN64
 
 

@@ -1,12 +1,15 @@
 package org.coderpwh.controller
 
 import org.apache.commons.lang3.StringUtils
+import org.coderpwh.pojo.User
 import org.coderpwh.service.UserService
 import org.coderpwh.vo.ErrorResult
 import org.coderpwh.vo.LoginVDataVO
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -49,4 +52,13 @@ class UserController {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
             .body(errorResult)
     }
+
+    @GetMapping("{token}")
+    fun queryUserByToken(
+        @PathVariable("token")
+        token:String
+    ): User? {
+        return userService.queryUserByToken(token)
+    }
+
 }
