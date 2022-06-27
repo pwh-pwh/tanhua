@@ -1,4 +1,4 @@
-package org.coderpwh.server.pojo
+package org.coderpwh.server.entry
 
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id
