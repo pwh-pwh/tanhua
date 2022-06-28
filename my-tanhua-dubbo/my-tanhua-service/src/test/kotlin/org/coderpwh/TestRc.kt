@@ -13,12 +13,12 @@ import org.springframework.boot.test.context.SpringBootTest
  */
 @SpringBootTest
 class TestRc {
-/*    @Autowired
-    lateinit var recommendUserApi: RecommendUserApi*/
+    @Autowired
+    lateinit var recommendUserApi: RecommendUserApi
     @Test
     fun testQu() {
-        /*var recommendUser = recommendUserApi.queryWithMaxScore(1L)
-        println(recommendUser)*/
+        var recommendUser = recommendUserApi.queryWithMaxScore(1L)
+        println(recommendUser)
         println("aa")
     }
 }

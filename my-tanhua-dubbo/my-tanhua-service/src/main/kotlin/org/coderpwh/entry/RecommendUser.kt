@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document
  * @date 2022-06-27 17:18
  * @version 1.0.0 v
  */
-@Document(collation = "recommend_user")
+@Document(collection = "recommend_user")
 data class RecommendUser(
     @Id
     var id:ObjectId?=null,

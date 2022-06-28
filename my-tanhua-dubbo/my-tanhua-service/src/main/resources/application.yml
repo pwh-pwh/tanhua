@@ -14,5 +14,8 @@ dubbo:
     name: dubbo
     port: 20880
   registry:
-    address: zookeeper://ip:2181
+    address: zookeeper://159.75.211.245:2181
     client: zkclient
+logging:
+  level:
+    org.coderpwh: debug
