@@ -53,7 +53,7 @@ project("my-tanhua-dubbo:my-tanhua-service") {
 // https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient
         implementation("com.github.sgroschupf:zkclient:0.1")
         // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
-        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
+        api("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
 /*    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
     implementation("org.mongodb:mongodb-driver-sync:3.9.0")*/
         implementation("org.apache.commons:commons-lang3:3.12.0")
@@ -77,9 +77,9 @@ project("my-tanhua-dubbo:my-tanhua-service") {
 
 project("my-tanhua-dubbo:my-tanhua-interface") {
     dependencies {
-//        api(project(":my-tanhua-dubbo:my-tanhua-service"))
-        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
-        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
+        api(project(":my-tanhua-dubbo:my-tanhua-service"))
+/*        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")*/
     }
 }
 
