@@ -35,23 +35,51 @@ subprojects {
 
 
 }
-//指定版本
-configurations.all {
-    resolutionStrategy{
-        force(
-            "mysql:mysql-connector-java:${mysqlVersion}",
-            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
-            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
-            "com.alibaba:druid:$druidVersion",
-            "commons-codec:commons-codec:1.15",
-            "org.apache.commons:commons-lang3:3.12.0",
-            "org.mongodb:mongodb-driver-sync:4.6.0",
-            "com.baomidou:mybatis-plus-boot-starter:3.5.1",
-            "org.apache.rocketmq:rocketmq-client:$rocketmqClientVersion",
-            "org.apache.rocketmq:rocketmq-spring-boot-starter:$rocketmqStarterVersion",
-            "commons-codec:commons-codec:1.15",
-            "org.springframework.boot:spring-boot-starter-data-redis:2.7.0"
-        )
+
+project("my-tanhua-dubbo:my-tanhua-service") {
+
+    dependencies {
+
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+        implementation("org.springframework.boot:spring-boot-starter")
+// https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter
+        implementation("org.apache.dubbo:dubbo-spring-boot-starter:3.0.9")
+
+// https://mvnrepository.com/artifact/com.alibaba/dubbo
+        implementation("com.alibaba:dubbo:2.6.4")
+// https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
+        implementation("org.apache.zookeeper:zookeeper:3.8.0")
+
+// https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient
+        implementation("com.github.sgroschupf:zkclient:0.1")
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
+/*    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+    implementation("org.mongodb:mongodb-driver-sync:3.9.0")*/
+        implementation("org.apache.commons:commons-lang3:3.12.0")
+        implementation("joda-time:joda-time:2.9.9")
+        // https://mvnrepository.com/artifact/io.netty/netty-all
+        implementation("io.netty:netty-all:4.1.32.Final")
+// https://mvnrepository.com/artifact/org.apache.curator/curator-framework
+        implementation("org.apache.curator:curator-framework:5.2.1")
+// https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
+        implementation("org.apache.curator:curator-recipes:5.2.1")
+// https://mvnrepository.com/artifact/org.apache.curator/curator-framework
+        implementation("org.apache.curator:curator-framework:5.2.1")
+// https://mvnrepository.com/artifact/org.apache.curator/curator-x-discovery
+        implementation("org.apache.curator:curator-x-discovery:5.2.1")
+        api(project(":my-tanhua-dubbo:my-tanhua-interface"))
+    }
+
+
+}
+
+
+project("my-tanhua-dubbo:my-tanhua-interface") {
+    dependencies {
+//        api(project(":my-tanhua-dubbo:my-tanhua-service"))
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
     }
 }
 

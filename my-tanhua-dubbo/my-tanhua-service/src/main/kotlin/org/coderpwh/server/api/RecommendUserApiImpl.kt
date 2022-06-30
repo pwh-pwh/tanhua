@@ -1,7 +1,7 @@
 package org.coderpwh.server.api
 
 import com.alibaba.dubbo.config.annotation.Service
-import org.coderpwh.server.entry.RecommendUser
+import org.coderpwh.entry.RecommendUser
 import org.coderpwh.server.vo.PageInfo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Sort

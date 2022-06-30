@@ -1,4 +1,4 @@
-package org.coderpwh.server.entry
+package org.coderpwh.entry
 
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id

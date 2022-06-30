@@ -1,6 +1,6 @@
 package org.coderpwh.server.api
 
-import org.coderpwh.server.entry.RecommendUser
+import org.coderpwh.entry.RecommendUser
 import org.coderpwh.server.vo.PageInfo
 
 /**
