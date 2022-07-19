@@ -77,9 +77,9 @@ project("my-tanhua-dubbo:my-tanhua-service") {
 
 project("my-tanhua-dubbo:my-tanhua-interface") {
     dependencies {
-        api(project(":my-tanhua-dubbo:my-tanhua-service"))
-/*        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
-        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")*/
+//        api(project(":my-tanhua-dubbo:my-tanhua-service"))
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
     }
 }
 
