@@ -5,7 +5,9 @@ repositories {
 dependencies {
 
 }
-
+configurations.all {
+    exclude(module = "slf4j-log4j12")
+}
 subprojects {
     tasks.jar {
         enabled = true

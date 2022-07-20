@@ -20,4 +20,4 @@ data class RecommendUser(
     @Indexed
     var score: Double? = null,
     var date: String? = null
-)
+):java.io.Serializable

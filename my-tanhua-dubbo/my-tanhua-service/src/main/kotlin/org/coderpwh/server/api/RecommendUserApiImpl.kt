@@ -17,13 +17,14 @@ import org.springframework.data.mongodb.core.query.Query
  * @date 2022-06-27 17:50
  * @version 1.0.0 v
  */
-@DubboService(version = "1.0.0")
+@DubboService
 class RecommendUserApiImpl: RecommendUserApi {
     @Autowired
     lateinit var mongoTemplate: MongoTemplate
     override fun queryWithMaxScore(userId: Long): RecommendUser {
         var query = Query.query(Criteria.where("toUserId").`is`(userId)).with(Sort.by(Sort.Order.desc("score"))).limit(1)
-        return mongoTemplate.findOne(query, RecommendUser::class.java)!!
+        var findOne = mongoTemplate.findOne(query, RecommendUser::class.java)!!
+        return findOne
     }
 
     override fun queryPageInfo(userId: Long, pageNum: Int, pageSize: Int): PageInfo<RecommendUser> {

@@ -45,13 +45,12 @@ project("my-tanhua-dubbo:my-tanhua-service") {
 // https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter
         implementation("org.apache.dubbo:dubbo-spring-boot-starter:3.0.9")
 
-// https://mvnrepository.com/artifact/com.alibaba/dubbo
-        implementation("com.alibaba:dubbo:2.6.4")
-// https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
-        implementation("org.apache.zookeeper:zookeeper:3.8.0")
+// https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-dependencies-zookeeper
+        api("org.apache.dubbo:dubbo-dependencies-zookeeper:3.0.9")
+// https://mvnrepository.com/artifact/org.apache.dubbo/dubbo
+        implementation("org.apache.dubbo:dubbo:3.0.9")
 
-// https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient
-        implementation("com.github.sgroschupf:zkclient:0.1")
+
         // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
         api("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.1")
 /*    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
@@ -60,14 +59,7 @@ project("my-tanhua-dubbo:my-tanhua-service") {
         implementation("joda-time:joda-time:2.9.9")
         // https://mvnrepository.com/artifact/io.netty/netty-all
         implementation("io.netty:netty-all:4.1.32.Final")
-// https://mvnrepository.com/artifact/org.apache.curator/curator-framework
-        implementation("org.apache.curator:curator-framework:5.2.1")
-// https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
-        implementation("org.apache.curator:curator-recipes:5.2.1")
-// https://mvnrepository.com/artifact/org.apache.curator/curator-framework
-        implementation("org.apache.curator:curator-framework:5.2.1")
-// https://mvnrepository.com/artifact/org.apache.curator/curator-x-discovery
-        implementation("org.apache.curator:curator-x-discovery:5.2.1")
+
         api(project(":my-tanhua-dubbo:my-tanhua-interface"))
     }
 

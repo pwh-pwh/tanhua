@@ -6,17 +6,18 @@ spring:
       uri: mongodb://159.75.211.245:27017/tanhua
 
 dubbo:
-  scan:
-    base-packages: org.coderpwh.server
   application:
-    name: dubbo-provider-tanhua
+    name: tanhua-dubbo-service
   protocol:
     name: dubbo
-    port: 20880
-    host: 169.254.194.196
+    port: -1
   registry:
-    address: zookeeper://159.75.211.245:2181
-    client: zkclient
+    id: zk-registry
+    address: zookeeper://127.0.0.1:2181
+  config-center:
+    address: zookeeper://127.0.0.1:2181
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181
 logging:
   level:
     org.coderpwh: debug

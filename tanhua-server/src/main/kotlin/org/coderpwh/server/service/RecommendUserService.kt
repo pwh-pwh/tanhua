@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service
 @Service
 class RecommendUserService {
 
-    @DubboReference(version = "1.0.0")
+    @DubboReference
     lateinit var recommendUserApi: RecommendUserApi
 
     fun queryTodayBest(id: Long): TodayBest? {
