@@ -5,3 +5,4 @@ include("my-tanhua-dubbo:my-tanhua-service")
 findProject(":my-tanhua-dubbo:my-tanhua-service")?.name = "my-tanhua-service"
 include("my-tanhua-dubbo:my-tanhua-interface")
 findProject(":my-tanhua-dubbo:my-tanhua-interface")?.name = "my-tanhua-interface"
+include("tanhua-server")

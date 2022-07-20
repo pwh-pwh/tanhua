@@ -13,6 +13,7 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
+    host: 169.254.194.196
   registry:
     address: zookeeper://159.75.211.245:2181
     client: zkclient

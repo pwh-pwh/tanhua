@@ -21,4 +21,10 @@ class TestRc {
         println(recommendUser)
         println("aa")
     }
+
+    @Test
+    fun testQuList() {
+        recommendUserApi.queryPageInfo(1L,1,10).records.forEach(::println)
+    }
+
 }

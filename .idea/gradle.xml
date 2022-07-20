@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/my-tanhua-dubbo" />
             <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-interface" />
             <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-service" />
+            <option value="$PROJECT_DIR$/tanhua-server" />
           </set>
         </option>
       </GradleProjectSettings>
