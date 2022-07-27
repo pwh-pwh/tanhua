@@ -1,6 +1,7 @@
 package org.coderpwh.server.controller
 
 import org.coderpwh.server.service.TodayBestService
+import org.coderpwh.server.vo.RecommendUserQueryParam
 import org.coderpwh.server.vo.TodayBest
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -18,6 +19,10 @@ import org.springframework.web.bind.annotation.RestController
 class TodayBestController {
     @Autowired
     lateinit var todayBestService: TodayBestService
+
     @GetMapping("todayBest")
-    fun queryTodayBest(@RequestHeader("Authorization") token:String) = todayBestService.queryTodayBest(token)
+    fun queryTodayBest(@RequestHeader("Authorization") token: String) = todayBestService.queryTodayBest(token)
+
+    @GetMapping("recommendation")
+    fun queryRecommendUserList(recommendQueryParam:RecommendUserQueryParam,@RequestHeader("Authorization") token: String) = todayBestService.queryRecommendUserList(recommendQueryParam, token)
 }

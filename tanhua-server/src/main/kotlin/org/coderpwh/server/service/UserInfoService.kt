@@ -20,4 +20,8 @@ class UserInfoService {
         return userInfoMapper.selectById(id)
     }
 
+    fun queryUserInfoList(wrapper: KtQueryWrapper<UserInfo>): List<UserInfo> {
+        return userInfoMapper.selectList(wrapper)
+    }
+
 }

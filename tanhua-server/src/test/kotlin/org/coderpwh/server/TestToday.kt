@@ -1,6 +1,7 @@
 package org.coderpwh.server
 
 import org.coderpwh.server.service.TodayBestService
+import org.coderpwh.server.vo.RecommendUserQueryParam
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -12,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest
  */
 @SpringBootTest
 class TestToday {
-    //eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibW9iaWxlIjoiMTc2MDIwMjY4NjgifQ.AgcbMhqF0llgfcUffjrpAVPjwL-OWwwOibUHZZ_7nbI
+
     @Autowired
     lateinit var todayBestService: TodayBestService
     @Test
@@ -23,4 +24,11 @@ class TestToday {
         println("hello")
 
     }
+
+    @Test
+    fun testList() {
+        var token = "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibW9iaWxlIjoiMTc2MDIwMjY4NjgifQ.AgcbMhqF0llgfcUffjrpAVPjwL-OWwwOibUHZZ_7nbI"
+        todayBestService.queryRecommendUserList(RecommendUserQueryParam(1,10),token)?.items?.forEach { println(it) }
+    }
+
 }

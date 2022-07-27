@@ -3,6 +3,8 @@ package org.coderpwh.server.service
 import com.alibaba.dubbo.config.annotation.Reference
 import org.apache.dubbo.config.annotation.DubboReference
 import org.coderpwh.api.RecommendUserApi
+import org.coderpwh.entry.RecommendUser
+import org.coderpwh.server.vo.PageInfo
 import org.coderpwh.server.vo.TodayBest
 import org.springframework.stereotype.Service
 
@@ -23,6 +25,10 @@ class RecommendUserService {
             fateValue = recommendUser.score!!.toLong(),
             id = recommendUser.userId
         )
+    }
+
+    fun queryRecommendUserList(id: Long, page: Int, pagesize: Int): PageInfo<RecommendUser> {
+        return recommendUserApi.queryPageInfo(id,page, pagesize)
     }
 
 }
